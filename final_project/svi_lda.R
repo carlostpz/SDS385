@@ -40,10 +40,9 @@ alpha = matrix( 1/n_topics , nrow = D, ncol = n_topics )
 eta = matrix(0.01, nrow = n_topics, ncol = N )
 
 # initializing lambda
-lambda_init1 = eta + matrix( rexp( n = n_topics * N, rate = 100 * 100 /( n_topics * N ) ), nrow = n_topics, ncol = N )
-lambda_init2 = eta + matrix( rexp( n = n_topics * N, rate = 100 * 100 /( n_topics * N ) ), nrow = n_topics, ncol = N )
-lambda_init3 = eta + matrix( rexp( n = n_topics * N, rate = 100 * 100 /( n_topics * N ) ), nrow = n_topics, ncol = N )
-lambda_init4 = eta + matrix( rexp( n = n_topics * N, rate = 100 * 100 /( n_topics * N ) ), nrow = n_topics, ncol = N )
+lambda_init1 = eta + matrix( rexp( n = n_topics * N, rate = 100 * D /( n_topics * N ) ), nrow = n_topics, ncol = N )
+lambda_init2 = eta + matrix( rexp( n = n_topics * N, rate = 100 * D /( n_topics * N ) ), nrow = n_topics, ncol = N )
+lambda_init3 = eta + matrix( rexp( n = n_topics * N, rate = 100 * D /( n_topics * N ) ), nrow = n_topics, ncol = N )
 
 # Start the clock!
 ptm <- proc.time()
